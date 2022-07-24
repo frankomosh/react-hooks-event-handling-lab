@@ -1,9 +1,17 @@
-// Code Keypad Component Here
 
-function Keypad (){
+import React, { PureComponent } from 'react'
+
+export default class Keypad extends PureComponent {     
+  render() {
+
+    function handleChange(event) {
+        console.log("Entering password...");
+    }
+
     return (
-        <div></div>
+      <div>
+          <input type="password" name='password' placeholder='password' onChange={handleChange}/>
+      </div>
     )
+  }
 }
-
-export default Keypad;
